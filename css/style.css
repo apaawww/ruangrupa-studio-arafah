@@ -1,0 +1,1886 @@
+
+/* ==================================================
+   RUANGRUPA STUDIO
+   INTERIOR DESIGN & CREATIVE SPACE
+   ================================================== */
+
+
+/* 1. RESET & DASAR */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --arafah_coral: #F06D50;
+    --arafah_yellow: #F5C94E;
+    --arafah_teal: #62B7A5;
+    --arafah_purple: #A98BD4;
+    --arafah_cream: #F8F5EF;
+    --arafah_dark: #292923;
+    --arafah_gray: #77766F;
+    --arafah_white: #FFFFFF;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--arafah_cream);
+    color: var(--arafah_dark);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.arafah_container {
+    width: 88%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* 2. HEADER & NAVBAR */
+
+#arafah_header {
+    width: 100%;
+    background: var(--arafah_cream);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.arafah_navbar {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.arafah_logo {
+    display: inline-block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.2;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.arafah_logo span {
+    color: var(--arafah_coral);
+}
+
+.arafah_nav_menu {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.arafah_nav_link {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--arafah_gray);
+    transition: 0.3s;
+}
+
+.arafah_nav_link:hover,
+.arafah_nav_link.arafah_active {
+    color: var(--arafah_coral);
+}
+
+.arafah_nav_button {
+    background: var(--arafah_coral);
+    color: white;
+    padding: 13px 20px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.arafah_nav_button:hover {
+    background: var(--arafah_dark);
+    transform: translateY(-3px);
+}
+
+.arafah_hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+
+/* 3. HERO SECTION */
+
+.arafah_hero {
+    padding: 65px 0 90px;
+}
+
+.arafah_hero_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.arafah_subtitle {
+    display: inline-block;
+    color: var(--arafah_coral);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+}
+
+.arafah_hero_text h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(55px, 6vw, 83px);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -3px;
+}
+
+.arafah_hero_text h1 span {
+    color: var(--arafah_coral);
+}
+
+.arafah_hero_text > p {
+    max-width: 450px;
+    margin-top: 25px;
+    color: var(--arafah_gray);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.arafah_hero_buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.arafah_btn_primary {
+    background: var(--arafah_coral);
+    color: white;
+    padding: 16px 24px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.arafah_btn_primary:hover {
+    background: var(--arafah_dark);
+    transform: translateY(-3px);
+}
+
+.arafah_btn_secondary {
+    border: 1px solid #D8D2C8;
+    padding: 15px 23px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.arafah_btn_secondary:hover {
+    border-color: var(--arafah_coral);
+    color: var(--arafah_coral);
+}
+
+.arafah_hero_stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 55px;
+    flex-wrap: wrap;
+}
+
+.arafah_hero_stats h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    color: var(--arafah_coral);
+}
+
+.arafah_hero_stats p {
+    color: var(--arafah_gray);
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.arafah_hero_image {
+    height: 510px;
+    position: relative;
+}
+
+.arafah_hero_image > img {
+    height: 100%;
+    border-radius: 180px 180px 20px 20px;
+}
+
+.arafah_floating_card {
+    position: absolute;
+    bottom: 30px;
+    left: -35px;
+    background: white;
+    padding: 17px 22px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+.arafah_floating_card > span {
+    background: var(--arafah_yellow);
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.arafah_floating_card h4 {
+    font-size: 13px;
+}
+
+.arafah_floating_card p {
+    font-size: 11px;
+    color: var(--arafah_gray);
+    margin-top: 4px;
+}
+
+
+/* 4. SECTION LABEL */
+
+.arafah_section_label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--arafah_gray);
+}
+
+.arafah_section_label span {
+    color: var(--arafah_coral);
+    margin-right: 8px;
+}
+
+
+/* 5. ABOUT SECTION */
+
+.arafah_about_section {
+    background: #F0EADF;
+    padding: 90px 0;
+}
+
+.arafah_about_content {
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 60px;
+}
+
+.arafah_about_text h2,
+.arafah_section_heading h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(35px, 4vw, 50px);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.arafah_about_text h2 span,
+.arafah_section_heading h2 span {
+    color: var(--arafah_coral);
+}
+
+.arafah_about_text > p {
+    color: var(--arafah_gray);
+    max-width: 550px;
+    line-height: 1.9;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.arafah_text_link {
+    display: inline-block;
+    color: var(--arafah_coral);
+    font-size: 13px;
+    font-weight: 800;
+    margin-top: 25px;
+    transition: 0.3s;
+}
+
+.arafah_text_link:hover {
+    transform: translateX(5px);
+}
+
+
+/* 6. SERVICES SECTION */
+
+.arafah_services_section,
+.arafah_projects_section {
+    padding: 100px 0;
+}
+
+.arafah_section_heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.arafah_section_heading h2 {
+    margin-top: 15px;
+}
+
+.arafah_section_heading > .arafah_text_link {
+    margin-bottom: 8px;
+}
+
+.arafah_service_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.arafah_service_card {
+    padding: 30px;
+    border-radius: 20px;
+    min-height: 285px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.arafah_service_card:hover {
+    transform: translateY(-8px);
+}
+
+.arafah_service_coral {
+    background: #F6D2C8;
+}
+
+.arafah_service_yellow {
+    background: #F6E7B7;
+}
+
+.arafah_service_teal {
+    background: #C6E3DA;
+}
+
+.arafah_service_number {
+    font-size: 12px;
+    font-weight: 800;
+    opacity: 0.6;
+}
+
+.arafah_service_icon {
+    font-size: 35px;
+    margin-top: 25px;
+}
+
+.arafah_service_card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.arafah_service_card p {
+    color: #64635E;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-top: 10px;
+}
+
+.arafah_service_card a {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* 7. PROJECT SECTION */
+
+.arafah_projects_section {
+    background: #F0EADF;
+}
+
+.arafah_project_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.arafah_project_card {
+    overflow: hidden;
+    border-radius: 20px;
+    background: white;
+}
+
+.arafah_project_card > img {
+    height: 330px;
+    transition: 0.5s;
+}
+
+.arafah_project_card:hover > img {
+    transform: scale(1.05);
+}
+
+.arafah_project_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px;
+}
+
+.arafah_project_info h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 19px;
+}
+
+.arafah_project_info p {
+    color: var(--arafah_gray);
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+.arafah_project_info > span {
+    color: var(--arafah_coral);
+    font-size: 25px;
+}
+
+
+/* 8. CTA SECTION */
+
+.arafah_cta_section {
+    padding: 90px 0;
+    background: var(--arafah_coral);
+    text-align: center;
+    color: white;
+}
+
+.arafah_cta_content > span {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.arafah_cta_content h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(40px, 5vw, 60px);
+    line-height: 1.1;
+    margin: 22px 0 30px;
+}
+
+.arafah_btn_light {
+    display: inline-block;
+    background: white;
+    color: var(--arafah_coral);
+    padding: 16px 25px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 800;
+    transition: 0.3s;
+}
+
+.arafah_btn_light:hover {
+    transform: translateY(-4px);
+    background: var(--arafah_dark);
+    color: white;
+}
+
+
+/* 9. FOOTER */
+
+#arafah_footer {
+    background: var(--arafah_dark);
+    color: white;
+    padding: 65px 0 25px;
+}
+
+.arafah_footer_content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.arafah_footer_content .arafah_logo {
+    color: white;
+}
+
+.arafah_footer_content > div:first-child > p {
+    max-width: 300px;
+    color: #B9B8B1;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+.arafah_footer_links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.arafah_footer_links a {
+    font-size: 13px;
+    color: #D1D0C9;
+    transition: 0.3s;
+}
+
+.arafah_footer_links a:hover {
+    color: var(--arafah_coral);
+}
+
+.arafah_copyright {
+    border-top: 1px solid #494943;
+    margin-top: 50px;
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.arafah_copyright p {
+    color: #AFAEA7;
+    font-size: 11px;
+}
+
+
+/* 10. RESPONSIVE TABLET */
+
+@media (max-width: 1050px) {
+
+    .arafah_nav_menu {
+        gap: 12px;
+    }
+
+    .arafah_nav_link {
+        font-size: 11px;
+    }
+
+    .arafah_nav_button {
+        padding: 11px 14px;
+    }
+
+    .arafah_hero_content {
+        gap: 35px;
+    }
+
+    .arafah_hero_image {
+        height: 430px;
+    }
+}
+
+
+/* 11. RESPONSIVE MOBILE */
+
+@media (max-width: 768px) {
+
+    .arafah_container {
+        width: 90%;
+    }
+
+    .arafah_navbar {
+        min-height: 75px;
+    }
+
+    .arafah_nav_button {
+        display: none;
+    }
+
+    .arafah_hamburger {
+        display: block;
+    }
+
+    .arafah_nav_menu {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 25px 5%;
+        background: var(--arafah_cream);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+    }
+
+    .arafah_nav_menu.arafah_show {
+        display: flex;
+    }
+
+    .arafah_nav_link {
+        font-size: 14px;
+    }
+
+    .arafah_hero {
+        padding: 45px 0 70px;
+    }
+
+    .arafah_hero_content {
+        grid-template-columns: 1fr;
+    }
+
+    .arafah_hero_text h1 {
+        font-size: 60px;
+    }
+
+    .arafah_hero_image {
+        height: 400px;
+        margin: 10px 15px 0;
+    }
+
+    .arafah_floating_card {
+        left: -15px;
+    }
+
+    .arafah_hero_stats {
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    .arafah_about_section,
+    .arafah_services_section,
+    .arafah_projects_section {
+        padding: 70px 0;
+    }
+
+    .arafah_about_content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .arafah_section_heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .arafah_service_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .arafah_project_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .arafah_project_card > img {
+        height: 280px;
+    }
+
+    .arafah_footer_content {
+        flex-direction: column;
+    }
+
+    .arafah_footer_links {
+        gap: 18px;
+    }
+
+    .arafah_copyright {
+        flex-direction: column;
+    }
+}
+
+
+/* 12. RESPONSIVE SMALL MOBILE */
+
+@media (max-width: 400px) {
+
+    .arafah_hero_text h1 {
+        font-size: 49px;
+    }
+
+    .arafah_hero_stats {
+        gap: 17px;
+    }
+
+    .arafah_hero_stats h3 {
+        font-size: 23px;
+    }
+
+    .arafah_hero_image {
+        height: 320px;
+    }
+
+    .arafah_btn_primary,
+    .arafah_btn_secondary {
+        padding: 13px 17px;
+        font-size: 12px;
+    }
+}
+
+/* =========================================
+   HALAMAN TENTANG KAMI
+========================================= */
+
+.arafah_about_hero {
+    padding: 100px 0;
+    background: var(--arafah_cream);
+    text-align: center;
+}
+
+.arafah_about_hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.1;
+    margin: 20px 0;
+    color: var(--arafah_dark);
+}
+
+.arafah_about_hero > .arafah_container > p:last-child {
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #666;
+}
+
+.arafah_about_story {
+    padding: 100px 0;
+}
+
+.arafah_about_story_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.arafah_about_story_image img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.arafah_about_story_text h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 15px 0 25px;
+}
+
+.arafah_about_story_text p:not(.arafah_section_label) {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.arafah_about_vision {
+    padding: 90px 0;
+    background: var(--arafah_cream);
+}
+
+.arafah_vision_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.arafah_vision_card {
+    padding: 40px;
+    background: white;
+    border-radius: 22px;
+}
+
+.arafah_vision_main {
+    background: var(--arafah_coral);
+    color: white;
+}
+
+.arafah_vision_card > span {
+    font-size: 14px;
+    font-weight: 700;
+    opacity: 0.7;
+}
+
+.arafah_vision_card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+.arafah_vision_card p,
+.arafah_vision_card li {
+    line-height: 1.8;
+}
+
+.arafah_vision_card:not(.arafah_vision_main) li {
+    margin-bottom: 12px;
+    color: #666;
+}
+
+.arafah_about_values {
+    padding: 100px 0;
+}
+
+.arafah_values_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.arafah_value_card {
+    padding: 30px 25px;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.arafah_value_card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.arafah_value_icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: var(--arafah_cream);
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.arafah_value_card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.arafah_value_card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* RESPONSIF HALAMAN TENTANG KAMI */
+
+@media (max-width: 900px) {
+    .arafah_about_story_grid {
+        gap: 35px;
+    }
+
+    .arafah_values_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .arafah_about_hero {
+        padding: 75px 0;
+    }
+
+    .arafah_about_story {
+        padding: 65px 0;
+    }
+
+    .arafah_about_story_grid,
+    .arafah_vision_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .arafah_about_story_image img {
+        height: 300px;
+    }
+
+    .arafah_about_story_text h2 {
+        font-size: 30px;
+    }
+
+    .arafah_vision_card {
+        padding: 28px;
+    }
+
+    .arafah_about_values {
+        padding: 65px 0;
+    }
+
+    .arafah_values_grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PENYESUAIAN HALAMAN TENTANG KAMI */
+
+.arafah_about_hero h1 span,
+.arafah_about_story_text h2 span,
+.arafah_section_heading h2 span {
+    color: var(--arafah_coral);
+}
+
+.arafah_about_hero .arafah_section_label,
+.arafah_about_story_text .arafah_section_label {
+    margin-bottom: 20px;
+}
+/* ABOUT PREVIEW IMAGE */
+
+.arafah_about_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.arafah_about_image img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 24px;
+    display: block;
+}
+
+@media (max-width: 700px) {
+    .arafah_about_content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .arafah_about_image img {
+        height: 280px;
+    }
+}
+
+/* =====================================
+   HALAMAN LAYANAN
+===================================== */
+
+.arafah_services_hero {
+    padding: 100px 0;
+    background: var(--arafah_cream);
+    text-align: center;
+}
+
+.arafah_services_hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.arafah_services_hero h1 span,
+.arafah_section_heading h2 span {
+    color: var(--arafah_coral);
+}
+
+.arafah_services_hero > .arafah_container > p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.8;
+}
+
+.arafah_services_detail {
+    padding: 90px 0;
+}
+
+.arafah_services_detail_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 40px;
+}
+
+.arafah_service_detail_card {
+    padding: 30px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    min-height: 480px;
+    transition: 0.3s ease;
+}
+
+.arafah_service_detail_card:hover {
+    transform: translateY(-7px);
+}
+
+.arafah_detail_coral {
+    background: #FCE0D9;
+}
+
+.arafah_detail_yellow {
+    background: #FBECC5;
+}
+
+.arafah_detail_teal {
+    background: #D9EFEB;
+}
+
+.arafah_detail_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arafah_detail_top > span {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.arafah_detail_icon {
+    font-size: 38px;
+}
+
+.arafah_service_detail_card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 26px;
+    margin: 25px 0 15px;
+}
+
+.arafah_service_detail_card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.arafah_service_detail_card h4 {
+    font-size: 14px;
+    margin: 25px 0 12px;
+}
+
+.arafah_service_detail_card ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.arafah_service_detail_card li {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #555;
+}
+
+.arafah_service_detail_card a {
+    margin-top: auto;
+    padding-top: 18px;
+    color: var(--arafah_dark);
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.arafah_service_detail_card a:hover {
+    color: var(--arafah_coral);
+}
+
+.arafah_service_benefits {
+    padding: 90px 0;
+    background: var(--arafah_cream);
+}
+
+.arafah_benefit_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 40px;
+}
+
+.arafah_benefit_card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.arafah_benefit_card > span {
+    font-size: 32px;
+    color: var(--arafah_coral);
+}
+
+.arafah_benefit_card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 21px;
+    margin: 18px 0 10px;
+}
+
+.arafah_benefit_card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* RESPONSIF */
+
+@media (max-width: 900px) {
+    .arafah_services_detail_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .arafah_benefit_grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .arafah_services_hero {
+        padding: 70px 0;
+    }
+
+    .arafah_services_detail,
+    .arafah_service_benefits {
+        padding: 65px 0;
+    }
+
+    .arafah_services_detail_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .arafah_service_detail_card {
+        min-height: auto;
+    }
+}
+
+/* =====================================
+   HALAMAN PROYEK
+===================================== */
+
+.arafah_projects_hero {
+    padding: 100px 0;
+    background: var(--arafah_cream);
+    text-align: center;
+}
+
+.arafah_projects_hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.arafah_projects_hero h1 span {
+    color: var(--arafah_coral);
+}
+
+.arafah_projects_hero > .arafah_container > p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.8;
+}
+
+.arafah_projects_gallery {
+    padding: 90px 0;
+}
+
+.arafah_project_gallery_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.arafah_gallery_card {
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
+    transition: 0.3s ease;
+}
+
+.arafah_gallery_card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+.arafah_gallery_image {
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+}
+
+.arafah_gallery_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.arafah_gallery_card:hover .arafah_gallery_image img {
+    transform: scale(1.05);
+}
+
+.arafah_gallery_info {
+    padding: 25px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.arafah_gallery_info div > span {
+    color: var(--arafah_coral);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.arafah_gallery_info h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.arafah_gallery_info p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.arafah_gallery_arrow {
+    color: var(--arafah_coral);
+    font-size: 25px;
+    flex-shrink: 0;
+}
+
+/* RESPONSIF */
+
+@media (max-width: 700px) {
+    .arafah_projects_hero {
+        padding: 70px 0;
+    }
+
+    .arafah_projects_gallery {
+        padding: 65px 0;
+    }
+
+    .arafah_project_gallery_grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .arafah_gallery_image {
+        height: 260px;
+    }
+
+    .arafah_gallery_info {
+        padding: 20px;
+    }
+
+    .arafah_gallery_info h3 {
+        font-size: 19px;
+    }
+}
+
+/* =====================================
+   HALAMAN PROSES KERJA
+===================================== */
+
+.arafah_process_hero {
+    padding: 100px 0;
+    background: var(--arafah_cream);
+    text-align: center;
+}
+
+.arafah_process_hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.arafah_process_hero h1 span {
+    color: var(--arafah_coral);
+}
+
+.arafah_process_hero p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.arafah_process_steps {
+    padding: 90px 0;
+}
+
+.arafah_process_timeline {
+    max-width: 850px;
+    margin: 50px auto 0;
+}
+
+.arafah_process_item {
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    gap: 25px;
+    position: relative;
+    padding-bottom: 45px;
+}
+
+.arafah_process_item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 75px;
+    left: 36px;
+    width: 2px;
+    height: calc(100% - 75px);
+    background: #e8e1d7;
+}
+
+.arafah_process_number {
+    width: 75px;
+    height: 75px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+}
+
+.arafah_process_coral {
+    background: #FCE0D9;
+    color: #D85D45;
+}
+
+.arafah_process_yellow {
+    background: #FBECC5;
+    color: #98701D;
+}
+
+.arafah_process_teal {
+    background: #D9EFEB;
+    color: #3F897B;
+}
+
+.arafah_process_purple {
+    background: #E9E0F5;
+    color: #8062A8;
+}
+
+.arafah_process_content {
+    padding: 10px 0;
+}
+
+.arafah_process_content > span {
+    color: var(--arafah_coral);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.arafah_process_content h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.arafah_process_content p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.arafah_process_commitment {
+    padding: 75px 0;
+    background: var(--arafah_cream);
+}
+
+.arafah_commitment_content {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+}
+
+.arafah_commitment_icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 28px;
+    background: #FCE0D9;
+    color: var(--arafah_coral);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+}
+
+.arafah_commitment_content h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 34px;
+    margin: 15px 0;
+}
+
+.arafah_commitment_content h2 span {
+    color: var(--arafah_coral);
+}
+
+.arafah_commitment_content p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* RESPONSIF */
+
+@media (max-width: 600px) {
+    .arafah_process_hero {
+        padding: 70px 0;
+    }
+
+    .arafah_process_steps {
+        padding: 65px 0;
+    }
+
+    .arafah_process_item {
+        grid-template-columns: 55px 1fr;
+        gap: 18px;
+        padding-bottom: 35px;
+    }
+
+    .arafah_process_number {
+        width: 55px;
+        height: 55px;
+        border-radius: 16px;
+        font-size: 20px;
+    }
+
+    .arafah_process_item:not(:last-child)::after {
+        top: 55px;
+        left: 26px;
+        height: calc(100% - 55px);
+    }
+
+    .arafah_process_content h3 {
+        font-size: 20px;
+    }
+
+    .arafah_commitment_content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .arafah_commitment_icon {
+        width: 70px;
+        height: 70px;
+        font-size: 32px;
+    }
+
+    .arafah_commitment_content h2 {
+        font-size: 28px;
+    }
+}
+
+/* =====================================
+   HALAMAN TESTIMONI
+===================================== */
+
+.arafah_testimonial_hero {
+    padding: 100px 0;
+    background: var(--arafah_cream);
+    text-align: center;
+}
+
+.arafah_testimonial_hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.arafah_testimonial_hero h1 span {
+    color: var(--arafah_coral);
+}
+
+.arafah_testimonial_hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.8;
+}
+
+.arafah_testimonial_section {
+    padding: 90px 0;
+}
+
+.arafah_testimonial_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 40px;
+}
+
+.arafah_testimonial_card {
+    padding: 30px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+    transition: 0.3s ease;
+}
+
+.arafah_testimonial_card:hover {
+    transform: translateY(-6px);
+}
+
+.arafah_testimonial_coral {
+    background: #FCE0D9;
+}
+
+.arafah_testimonial_yellow {
+    background: #FBECC5;
+}
+
+.arafah_testimonial_teal {
+    background: #D9EFEB;
+}
+
+.arafah_testimonial_purple {
+    background: #E9E0F5;
+}
+
+.arafah_testimonial_stars {
+    color: #D78A24;
+    font-size: 19px;
+    letter-spacing: 3px;
+}
+
+.arafah_testimonial_quote {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #444;
+    margin: 22px 0 28px;
+}
+
+.arafah_testimonial_profile {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 20px;
+}
+
+.arafah_testimonial_avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--arafah_dark);
+    flex-shrink: 0;
+}
+
+.arafah_testimonial_profile h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.arafah_testimonial_profile span {
+    font-size: 12px;
+    color: #666;
+}
+
+.arafah_testimonial_note {
+    margin-top: 25px;
+    color: #888;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* RESPONSIF */
+
+@media (max-width: 900px) {
+    .arafah_testimonial_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .arafah_testimonial_hero {
+        padding: 70px 0;
+    }
+
+    .arafah_testimonial_section {
+        padding: 65px 0;
+    }
+
+    .arafah_testimonial_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .arafah_testimonial_card {
+        min-height: 270px;
+    }
+}
+
+/* =====================================
+   HALAMAN KONTAK
+===================================== */
+
+.arafah_contact_hero {
+    padding: 100px 0;
+    background: var(--arafah_cream);
+    text-align: center;
+}
+
+.arafah_contact_hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(42px, 5vw, 65px);
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.arafah_contact_hero h1 span,
+.arafah_contact_info h2 span {
+    color: var(--arafah_coral);
+}
+
+.arafah_contact_hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.8;
+}
+
+.arafah_contact_section {
+    padding: 90px 0;
+}
+
+.arafah_contact_grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 55px;
+    align-items: start;
+}
+
+.arafah_contact_info h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 38px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.arafah_contact_info > p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.arafah_contact_detail {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.arafah_contact_detail_item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.arafah_contact_icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 15px;
+    background: #FCE0D9;
+    color: var(--arafah_coral);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    flex-shrink: 0;
+}
+
+.arafah_contact_detail_item span {
+    color: #888;
+    font-size: 12px;
+}
+
+.arafah_contact_detail_item h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    margin-top: 5px;
+    overflow-wrap: anywhere;
+}
+
+.arafah_contact_note {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--arafah_cream);
+    padding: 20px;
+    border-radius: 16px;
+    margin-top: 35px;
+}
+
+.arafah_contact_note span {
+    color: var(--arafah_coral);
+    font-size: 25px;
+}
+
+.arafah_contact_note p {
+    color: #555;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* FORM */
+
+.arafah_contact_form_box {
+    background: white;
+    padding: 38px;
+    border-radius: 24px;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.06);
+}
+
+.arafah_contact_form_heading > span {
+    color: var(--arafah_coral);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.arafah_contact_form_heading h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 27px;
+    margin: 12px 0 8px;
+}
+
+.arafah_contact_form_heading p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.arafah_form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 20px;
+}
+
+.arafah_form_group label {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.arafah_form_group input,
+.arafah_form_group select,
+.arafah_form_group textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #e5e1da;
+    border-radius: 11px;
+    background: #fff;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--arafah_dark);
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.arafah_form_group input:focus,
+.arafah_form_group select:focus,
+.arafah_form_group textarea:focus {
+    border-color: var(--arafah_coral);
+    box-shadow: 0 0 0 3px rgba(240, 109, 80, 0.1);
+}
+
+.arafah_form_group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.arafah_form_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.arafah_form_button {
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    padding: 16px 22px;
+    background: var(--arafah_coral);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.arafah_form_button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.arafah_form_disclaimer {
+    text-align: center;
+    font-size: 11px;
+    color: #999;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+/* RESPONSIF */
+
+@media (max-width: 850px) {
+    .arafah_contact_grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .arafah_contact_hero {
+        padding: 70px 0;
+    }
+
+    .arafah_contact_section {
+        padding: 60px 0;
+    }
+
+    .arafah_contact_form_box {
+        padding: 25px 20px;
+    }
+
+    .arafah_contact_info h2 {
+        font-size: 32px;
+    }
+
+    .arafah_form_row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
